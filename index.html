@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title class="title">Cálculo de Consumo de Energia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Cálculo de Consumo de Energia</h1>
+      <p id="champion" class="champion">Campeão: --</p>
+    </header>
+
+    <main>
+      <!-- Formulário Principal -->
+      <form id="energyForm">
+        <!-- Nome do Usuário -->
+        <section class="card">
+          <h2>Cadastro de Usuário</h2>
+          <label for="username">Nome do Usuário:</label>
+          <input type="text" id="username" placeholder="Digite o nome" required>
+        </section>
+
+        <!-- Potência dos Aparelhos -->
+        <section class="card">
+          <h2>1. Potência dos Aparelhos</h2>
+          <h3>Selecione os aparelhos, suas quantidades, dias e horas:</h3>
+          <div class="scrollable">
+            <table>
+              <thead>
+                <tr>
+                  <th>Aparelho</th>
+                  <th>Potência (W)</th>
+                  <th>Quantidade</th>
+                  <th>Dias</th>
+                  <th>Horas</th>
+                </tr>
+              </thead>
+              <tbody id="applianceTable">
+                <!-- Os aparelhos serão carregados dinamicamente pelo JavaScript -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Preço do Quilowatt -->
+        <section class="card">
+          <h2>2. Preço do Quilowatt-hora (R$)</h2>
+          <label for="pricePerKwh">Preço do kWh (R$):</label>
+          <input type="number" id="pricePerKwh" min="0" step="0.01" required>
+        </section>
+
+        <!-- Taxa de Energia Pública -->
+        <section class="card">
+          <h2>3. Taxa de Energia Pública</h2>
+          <label for="publicTax">Taxa de energia pública (R$):</label>
+          <input type="number" id="publicTax" min="0" step="0.01" required>
+        </section>
+
+        <!-- Bandeira Tarifária -->
+        <section class="card">
+          <h2>4. Bandeira Tarifária</h2>
+          <label>Selecione a bandeira:</label>
+          <div class="radio-group">
+            <input type="radio" name="tariff" value="verde" id="green" checked>
+            <label for="green">Bandeira Verde</label>
+            <input type="radio" name="tariff" value="amarela" id="yellow">
+            <label for="yellow">Bandeira Amarela</label>
+            <input type="radio" name="tariff" value="vermelha1" id="red1">
+            <label for="red1">Bandeira Vermelha (Patamar 1)</label>
+            <input type="radio" name="tariff" value="vermelha2" id="red2">
+            <label for="red2">Bandeira Vermelha (Patamar 2)</label>
+          </div>
+        </section>
+
+        <!-- Botão de Calcular -->
+        <button type="button" id="calculateBtn" class="btn">Resultado</button>
+      </form>
+
+      <!-- Resultado -->
+      <div id="result" class="hidden card">
+        <h2>Resultados</h2>
+        <p id="totalConsumption">Consumo total (kWh): --</p>
+        <p id="totalCost">Gasto total (R$): --</p>
+        <p id="dailyConsumption">Consumo diário (kWh): --</p>
+        <p id="dailyCost">Gasto diário (R$): --</p>
+      </div>
+
+      <!-- Lista de Usuários -->
+      <section class="card">
+        <h2>Lista de Cadastros</h2>
+        <div class="scrollable">
+          <ul id="userList">
+            <!-- Lista de usuários será preenchida dinamicamente -->
+          </ul>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
