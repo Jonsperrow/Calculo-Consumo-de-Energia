@@ -1,0 +1,114 @@
+*{
+  color: rgb(8, 230, 100);
+  left: 35%;
+  top: -20;
+  
+  
+}
+
+body{
+  
+  font-family: "Oswald", sans-serif;
+  padding-left: 250px;
+}
+
+.vid{
+  align-items: center;
+  top: 0%;
+  left: 0%;
+  position: fixed;
+  width: 100%;
+  zoom: 63%;
+  z-index: -1;
+  overflow: hidden;
+  object-fit: cover; 
+}
+
+h1{
+  
+  color: #ffffe2; /* Cor do texto */
+  padding: 10px 10px; /* Espaçamento interno */
+  display: inline-block; /* Garante que o fundo só cubra o texto */
+  border-radius: 40px; /* (Opcional) Bordas arredondadas */
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 20px;
+  zoom: 89%;
+  text-shadow: 2px 2px 5px rgba(12, 6, 6, 0.966), 
+             0 0 20px red, 
+             0 0 30px rgb(80, 13, 189);
+
+} 
+
+header h2{
+  background-color: rgba(173, 216, 230, 0.404); /* Cor do fundo */
+  color: #a4f8d6; /* Cor do texto */
+  padding: 10px 20px; /* Espaçamento interno */
+  display: inline-block; /* Garante que o fundo só cubra o texto */
+  border-radius: 30px; /* (Opcional) Bordas arredondadas */
+  font-size: 20px;
+  text-align: center;
+  margin-top: 0px;
+  text-shadow: 2px 2px 5px rgba(12, 6, 6, 0.966), 
+             0 0 20px red, 
+             0 0 30px rgb(80, 13, 189);
+}
+
+.font-family1 {
+  font-family: "Cinzel", serif;
+}
+
+.font-family2 {
+  font-family: "Cinzel", serif;
+  font-weight: 400px;
+  text-transform: capitalize;
+}
+
+
+.champion {
+  background-color: rgba(128, 255, 0, 0.404);
+  color: rgb(4, 4, 66);
+  font-family: "Cinzel", serif;
+  font-weight: 400px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  zoom: 120%;
+  display: inline-block;
+  border-radius: 10px;
+} 
+
+
+.scrollable {
+  max-height: 100px;
+  max-width: 790px;
+  overflow-y: auto;
+  border: 2px solid #25202c;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 2px;
+  background-color: #13101b48;
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  padding: 0.5rem;
+  border-bottom: 1px solid #da0c0c;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hidden {
+  display: none;
+}
+.btn{
+  color: gold;
+  background-color: rgb(7, 102, 20);
+  cursor: pointer; /* Mãosinha */
+}
